@@ -6,29 +6,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>학생정보 수정 페이지</title>
+<title>수정할 뉴스 데이터 내용 처리 페이지</title>
 </head>
 <body>
 <% request.setCharacterEncoding("utf-8"); %>
 <% 
-/*
-int id = Integer.parseInt(request.getParameter("id"));
-out.println("해당번호" + id);
-*/
+
 try{
-	String name=request.getParameter("name");
-	String address=request.getParameter("address");
-	String birthym=request.getParameter("birthym");
-	String dept=request.getParameter("dept");
-	int id = Integer.parseInt(request.getParameter("id"));
+	String b_name=request.getParameter("b_name");
+	String b_title=request.getParameter("b_title");
+	String b_content=request.getParameter("b_content");
+	String b_filename=request.getParameter("b_filename");
+	String b_date=request.getParameter("b_date");
+	int id = Integer.parseInt(request.getParameter("b_id"));
 	
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/numdb?useUnicode=true&characterEncoding=utf8","choo","123");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=utf8", "root", "0323");
 	Statement stmt = conn.createStatement();
-	String sql = "update test set name= '" + name+ "',  address=' "+address+"' , birthym = '"+birthym+"', dept ='"+dept+"' where id=" + id;
-	//String sql = "update test set name='"+name+"', address='"+address+"' ,birthym='"+birthym+"', dept='"+dept+"' where id =" id;
+	String sql = "update dho set b_name= '" + b_name+ "',  b_title=' "+b_title+"' , b_content = '"+b_content+"', b_filename ='"+b_filename+"', b_date ='"+b_date+"' where id=" + id;
+	//String sql = "update dho set b_name= '" + b_name+ "',  b_title=' "+b_title+"' , b_content = '"+b_content+"', b_filename ='"+b_filename+"', b_date ='"+b_date+"' where id=" id;
 	stmt.executeUpdate(sql);
-	response.sendRedirect("dbtest.jsp");
+	response.sendRedirect("fview.jsp");
 	stmt.close();
 	conn.close();
 	
