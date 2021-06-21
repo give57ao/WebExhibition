@@ -49,7 +49,7 @@ try{
 	if(rs.next()){
 		b_id = rs.getInt(1);
 		b_id = b_id + 1;
-		rs.close();
+		rs.close();	
 		stmt.close();
 	}else {
 		b_id = 1;

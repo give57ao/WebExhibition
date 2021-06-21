@@ -26,7 +26,7 @@ height:150px;}
 <% request.setCharacterEncoding("utf-8"); %>
 <%
 try{
-	String b_name, b_mail, b_title, b_content, b_date, b_pwd, b_filename, b_filesize;	
+	String b_name, b_mail, b_title, b_content, b_date, b_filename, b_filesize;	
 	int b_id, pagecount;
 	int datacount = 0;
 	/* 데이터베이스 연동 - 드라이버 설정 */
