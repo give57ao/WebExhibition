@@ -15,12 +15,11 @@
 <body>
 <% request.setCharacterEncoding("utf-8"); %>
 <% 
-ServletContext scontext = getServletContext();
+ServletContext scontext = getServletContext();	
 String realFolder = scontext.getRealPath("images");
-String id = request.getParameter("b_id");
-int b_id;
+
+
 try{
-	
 	String b_filename="";
 	String b_filesize="";
 	MultipartRequest multi = new MultipartRequest(request, realFolder, (1024*1024*5), "utf-8", new DefaultFileRenamePolicy());
@@ -42,14 +41,17 @@ try{
 	String b_title = multi.getParameter("b_title");
 	String b_content = multi.getParameter("b_content");
 	String b_date = multi.getParameter("b_date");
+	//int id = Integer.parseInt(request.getParameter("b_id")); 
+	int id = Integer.parseInt(multi.getParameter("b_id")); 
+
+	//java.lang.NumberFormatException: null 
 	/* 데이터베이스 연동 - 드라이버 설정 */
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=utf8", "root", "0323");
 	Statement stmt = conn.createStatement();
 	
 	String sql = "update dho set b_name= '" +b_name+ "',  b_title=' "+b_title+"', b_content= '" +b_content+"', b_date = '"+b_date+"', b_filename ='"+ b_filename +"' where b_id=" + id;
-	//String sql = "update test set name= '" + name+ "',  address=' "+address+"' , birthym = '"+birthym+"', dept ='"+dept+"' where id=" + id;
-	//String sql = "update dho set b_name= '${b_name}'  b_title='${b_title}' , b_content = '${b_content}', b_filename ='${b_filename}', b_date ='${b_date}' where b_id='${id}'";
+	
 	stmt.executeUpdate(sql);
 	//out.println(sql);
 	response.sendRedirect("filist.jsp");
@@ -59,7 +61,8 @@ try{
 	
 
 }catch(Exception e){
-   out.println(e); 
+	out.println(e); 
+	
 }
 
 %> 

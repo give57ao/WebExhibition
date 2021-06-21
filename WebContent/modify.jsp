@@ -13,16 +13,15 @@
 		Class.forName("com.mysql.jdbc.Driver"); 
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=utf8", "root", "0323");
 		Statement stmt = conn.createStatement();
-		String sql = "select b_id, b_name,  b_title, b_content, b_filename, b_filesize, b_date from dho where b_id="+id;
+		String sql = "select b_name,  b_title, b_content, b_filename, b_date from dho where b_id="+id;
 		ResultSet rs = stmt.executeQuery(sql); 
 		if(rs.next()){
-		b_id = rs.getInt(1);
-		b_name = rs.getString(2);
-		b_title = rs.getString(3);
-		b_content = rs.getString(4);
-		b_filename = rs.getString(5);
-		b_date = rs.getString(6);
-		b_filesize = rs.getString(7);
+		
+		b_name = rs.getString(1);
+		b_title = rs.getString(2);
+		b_content = rs.getString(3);
+		b_filename = rs.getString(4);
+		b_date = rs.getString(5);
 	}
 	rs.close();
 	stmt.close();
@@ -38,22 +37,27 @@
 </head>
 
 <body>
- 
- 
-
-
 <form name="myform" action="modify_act.jsp" method="post" enctype="multipart/form-data">
 <table border="1" cellspacing="0" cellpadding="5">
+<tr> 
+<th> 이미지 파일 </th>
+<td> <input type="file" name="b_filename" value="<%=b_filename %>"> </td>
+</tr> 	
 <tr>
-<th>작성자</th> <td> <input type="text" name="name" value="<%=b_name%>"></td>
+<th> 작성자 </th>
+<td> <input type="text" name="b_name" value="<%=b_name %>"> </td>
 </tr>
 <tr>
-<th>제목</th> <td><input type="text" name="address" value="<%=b_title %>"></td>
-<tr>
-<th>내용</th> <td><input type="text" name="birthym" value="<%=b_content %>"></td>
+<th> 날짜 </th>
+<td> <input type="text" name="b_date" value="<%=b_date %>"> </td>
 </tr>
 <tr>
-<th> 이미지 파일 </th><td> <input type="file" name="b_filename" value="<%=b_filename %>"> </td>
+<th> 제목 </th>
+<td> <input type="text" name="b_title" value="<%=b_title %>"> </td>
+</tr>
+<tr>
+<th> 내용 </th>
+<td> <textarea name="b_content"  value="<%=b_content %>"> </textarea> </td>
 </tr>
 <tr>
   <td colspan="2">   
@@ -62,10 +66,6 @@
         </td>
 </tr>
 </table>
-
-
-
-
 </form>
 
 
