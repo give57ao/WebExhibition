@@ -1,6 +1,6 @@
 # WebExhibition
 
-##INDEX
+## INDEX
 
 * Background
 * Installation Process
@@ -9,12 +9,12 @@
 * THANKS
 * License
 
-###Background
+### Background
 ---
 코로나 시대에 맞는 문화생활을 제공하고 예술가들의 데뷔 접근성을 높이고자 웹 전시회 프로젝트를 추진하게 되었습니다.
 
 
-###Installation Process
+### Installation Process
 ---
 [MySQL Server] https://dev.mysql.com/downloads/windows/installer/5.7.html
 
@@ -25,7 +25,7 @@
 [Eclipse] https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2019-12/R/eclipse-jee-2019-12-R-win32-x86_64.zip
 
 
-###Getting Started
+### Getting Started
 ---
 ####Back-End
 
@@ -41,7 +41,7 @@
 ![웹전시회_사용방법 (4)](https://user-images.githubusercontent.com/70637205/123608243-8b7ea380-d839-11eb-93a2-85d37a8c2631.jpg)
 
 ---
-####Front-End
+#### Front-End
 
 
 ![웹전시회_사용방법 (5)](https://user-images.githubusercontent.com/70637205/123608444-ba951500-d839-11eb-8b26-628e50a64539.jpg)
@@ -61,7 +61,7 @@
 ![웹전시회_사용방법 (12)](https://user-images.githubusercontent.com/70637205/123608614-dd272e00-d839-11eb-9b6e-6eb488dc0e6b.jpg)
 
 ---
-####DB
+#### DB
 
 
 user
@@ -75,15 +75,15 @@ dho (news detail table)
 ---
 
 
-|Field|Type|Null|Key|Default|Extra|
-|:--:|:--:||:--:|:--:||:--:|:--:|:--:|
-|b_id|int(11)|No|PRI|NULL|auto_increment|
-|b_name|varchar(30)|No| |NULL| |
-|b_title|varchar(50)|YES| |NULL| |
-|b_content|mediumtext|YES| |NULL| |
-|b_filename|varchar(50)|YES| |NULL| |
-|b_filesize|varchar(60)|YES| |NULL| |
-|b_date|varchar(50)|YES| |NULL| |
+| Field      | Type        | Null | Key | Default | Extra          |
+|------------|-------------|------|-----|---------|----------------|
+| b_id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| b_name     | varchar(30) | NO   |     | Null    |                |
+| b_title    | varchar(50) | YES  |     | NULL    |                |
+| b_content  | mediumtext  | YES  |     | NULL    |                |
+| b_filename | varchar(50) | YES  |     | NULL    |                |
+| b_filesize | varchar(60) | YES  |     | NULL    |                |
+| b_date     | varchar(50) | YES  |     | NULL    |                |
 
 ```
 	/* 데이터베이스 연동 - 드라이버 설정 */
@@ -93,19 +93,20 @@ dho (news detail table)
 ```
 
 
-###File Manifest
+### File Manifest
 ---
 
 
 ![파일](https://user-images.githubusercontent.com/70637205/123616446-41012500-d841-11eb-8a3b-51c0101c8d8e.PNG)
 
 
-###THANKS
+### THANKS
 ---
 프로젝트에 도움을 주고계신 (주)캐롯아이 아키텍처 및 CTO를 맡고 계신 김승환 멘토님과 두원공과대학교 스마트IT학과 박철호 교수님께
 감사의 인사를 드립니다.
+또한 작품 데이터 사용에 협조해주신 리안 갤러리 관리자님께도 감사의 인사를 드립니다.
 
 
-###License
+### License
 ---
 This project is licensed under the terms of the MIT license
