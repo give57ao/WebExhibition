@@ -21,7 +21,7 @@ height:150px;}
 <tr>
  <th> 번호 </th> <th> 이미지 </th>
  <th> 제목 </th> <th> 작성자 </th>
- <th> 날짜 </th>  
+ <th> 날짜 </th>  <th> 수정 </th>
 </tr>
 <% request.setCharacterEncoding("utf-8"); %>
 <%
@@ -70,6 +70,7 @@ try{
 		<td><%=b_name %></td>
 		<td><%=b_date %></td>
 		<td><a href="modify.jsp?b_id=<%=b_id %>">수정하기 </a></td>
+		<!-- 수정하기 링크를 리스트에 추가하고 상세페이지에서 삭제하였음 -->
 		</tr>
 		<%
 		if(rs.getRow() == datacount){
