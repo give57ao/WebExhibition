@@ -9,6 +9,7 @@
        <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
          <!-- JS --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -85,9 +86,18 @@
             <div class="null"></div>
             <div class="news-detail">
             <div> <%=b_content %></div>
+			 <div class="null"></div>
+			 <div class="null"></div>
+			 <div class="null"></div>
+			 <div class="null"></div>
+			 <p> 
+				<a href="news.jsp"><i class="fas fa-arrow-left"></i>   Back  </a>
+			<p>
 			 </div>
-<a href="modify.jsp?b_id=<%=b_id %>">수정하기 </a>
- <!-- Multiple annotations found at this line: - b_id cannot be resolved to a variable -->
+			 
+			 
+<!-- <a href="modify.jsp?b_id=<%=b_id %>">수정하기 </a> -->
+ <!-- 수정하는 페이지가 사용자에게 보여선 안되기 때문에 filist.jsp에서 수정하는 코드를 추가하고 fview.jsp에선 삭제하였습니다. -->
 <%			
 		}
 	rs.close(); 	
@@ -100,9 +110,7 @@
 %>
 
 			 
-<p> 
-<a href="news.jsp">  뒤로가기  </a>
-<p>
+
 
 
 

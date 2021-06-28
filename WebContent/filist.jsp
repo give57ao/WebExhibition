@@ -69,6 +69,7 @@ try{
 		<td> <a href="fview.jsp?b_id=<%=b_id %>"><%=b_title %> </a> </td>
 		<td><%=b_name %></td>
 		<td><%=b_date %></td>
+		<td><a href="modify.jsp?b_id=<%=b_id %>">수정하기 </a></td>
 		</tr>
 		<%
 		if(rs.getRow() == datacount){
