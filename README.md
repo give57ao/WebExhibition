@@ -27,7 +27,7 @@
 
 ### Getting Started
 ---
-####Back-End
+#### Back-End
 
 
 ![웹전시회_사용방법](https://user-images.githubusercontent.com/70637205/123607525-f085c980-d838-11eb-8fcb-e06628bff4c9.jpg)
@@ -38,7 +38,7 @@
 
 ![웹전시회_사용방법 (3)](https://user-images.githubusercontent.com/70637205/123608168-7dc91e00-d839-11eb-9ddb-f8cb7be13045.jpg)
 
-![웹전시회_사용방법 (4)](https://user-images.githubusercontent.com/70637205/123608243-8b7ea380-d839-11eb-93a2-85d37a8c2631.jpg)
+![웹전시회_사용방법 (13)](https://user-images.githubusercontent.com/70637205/123619058-c259b700-d843-11eb-8a42-5fcd1fa8ff74.jpg)
 
 ---
 #### Front-End
